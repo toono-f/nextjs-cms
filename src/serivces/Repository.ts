@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const repository = axios.create({
-  baseURL: "/graphql",
+  baseURL: "http://localhost:8000/index.php?graphql",
   headers: {
     "Content-Type": "application/json",
   },
@@ -15,7 +15,7 @@ const Repository = (query: string, { variables }: Record<string, any> = {}) => {
 
   return {
     getWp() {
-      return repository.post("/", body);
+      return repository.post("", body);
     },
   };
 };
