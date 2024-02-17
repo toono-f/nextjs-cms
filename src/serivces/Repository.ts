@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const repository = axios.create({
-  baseURL: "http://localhost:8000/index.php?graphql",
+  baseURL: `${process.env.NEXT_PUBLIC_WP_ENDPOINT}/index.php?graphql`,
   headers: {
     "Content-Type": "application/json",
   },
