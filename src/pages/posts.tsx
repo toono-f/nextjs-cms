@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import PostType from "@/types/PostType";
-import PostService from "@/serivces/PostService"; // 注意: "services"のスペルミスがあるようです。正しくは "@/services/PostService" かもしれません。
+import PostService from "@/services/PostService";
 
 const Home: NextPage<{
   staticPostList: PostType[];
