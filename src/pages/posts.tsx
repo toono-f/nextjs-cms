@@ -6,13 +6,6 @@ import { useEffect } from "react";
 const Home: NextPage<{
   staticPostList: PostType[]; // 型の指定をする場所に注意！
 }> = ({ staticPostList }) => {
-  useEffect(() => {
-    (async () => {
-      const postList = await PostService.getList();
-      console.log(postList, "test");
-    })();
-  }, []);
-
   return (
     <div>
       test
