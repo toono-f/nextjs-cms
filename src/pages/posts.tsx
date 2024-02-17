@@ -8,7 +8,6 @@ const Home: NextPage<{
 }> = ({ staticPostList }) => {
   return (
     <div>
-      test
       {staticPostList.map((post) => {
         return <p key={post.id}>{post.title}</p>; // 一個ずつ表示させる
       })}
