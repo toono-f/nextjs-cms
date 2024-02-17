@@ -5,14 +5,6 @@ const nextConfig = {
   experimental: {
     runtime: "experimental-edge",
   },
-  async rewrites() {
-    return [
-      {
-        source: "/graphql",
-        destination: "http://localhost:8000/index.php?graphql",
-      },
-    ];
-  },
 };
 
 export default nextConfig;
