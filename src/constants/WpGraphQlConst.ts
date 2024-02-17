@@ -7,6 +7,9 @@ export class WpGraphQlPostConst {
               id
               date
               content
+              car {
+                price
+              }
             }
           }
         }
