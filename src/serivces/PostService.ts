@@ -8,9 +8,9 @@ class PostService {
 
       return res.data.data.posts.edges.map((data: any) => {
         return data.node;
-      }); // 扱いやすいようにデータを加工する
+      });
     } catch {
-      return []; // エラーだった場合は空のpostListにする
+      return [];
     }
   }
 }
