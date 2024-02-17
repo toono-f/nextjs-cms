@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,6 +47,12 @@ export default function Home() {
           送信
         </button>
       </form>
+
+      <p className="mt-4">
+        <Link href="/" className="underline">
+          トップに戻る
+        </Link>
+      </p>
     </main>
   );
 }
