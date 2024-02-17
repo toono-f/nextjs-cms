@@ -56,3 +56,7 @@ export default function Home() {
     </main>
   );
 }
+
+export const config = {
+  runtime: "experimental-edge",
+};
