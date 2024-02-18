@@ -5,8 +5,6 @@ export default async function handler() {
     query: WpGraphQlPostConst.list,
   };
 
-  let data: any;
-
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_WP_ENDPOINT}/index.php?graphql`,
     {
@@ -19,7 +17,7 @@ export default async function handler() {
     },
   );
 
-  data = await response.json();
+  const data = await response.json();
 
   if (data) {
     return Response.json(
