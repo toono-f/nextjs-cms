@@ -7,14 +7,14 @@ const Home: NextPage<{
 }> = ({ staticPostList }) => {
   return (
     <div className="p-4">
-      {staticPostList.map((post) => {
-        return <p key={post.id}>{post.title}</p>;
-      })}
-      <p className="mt-4">
+      <p className="mb-4">
         <Link href="/form/" className="underline">
           お問い合わせはこちら
         </Link>
       </p>
+      {staticPostList.map((post) => {
+        return <p key={post.id}>{post.title}</p>;
+      })}
     </div>
   );
 };
