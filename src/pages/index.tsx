@@ -22,7 +22,12 @@ const Home: NextPage<{
 export async function getServerSideProps() {
   const staticPostList = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/graphql`,
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((err) => {
+      console.error(err);
+      return [];
+    });
 
   return {
     props: {
