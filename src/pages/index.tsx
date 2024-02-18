@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import PostType from "@/types/PostType";
-import PostService from "@/services/PostService";
 import Link from "next/link";
 
 const Home: NextPage<{
@@ -21,7 +20,10 @@ const Home: NextPage<{
 };
 
 export async function getServerSideProps() {
-  const staticPostList = await PostService.getList();
+  const staticPostList = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/graphql`,
+  ).then((res) => res.json());
+
   return {
     props: {
       staticPostList,
